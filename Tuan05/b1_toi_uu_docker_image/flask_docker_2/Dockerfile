@@ -10,7 +10,7 @@ COPY requirements.txt .
 RUN pip install --user --no-cache-dir -r requirements.txt
 
 
-# STAGE 2: Kiểm tra/Linter (Giai đoạn Testing - Tùy chọn của thầy)
+# STAGE 2: Kiểm tra/Linter (Giai đoạn Testing)
 FROM python:3.9-alpine AS tester
 WORKDIR /app
 COPY --from=builder /root/.local /root/.local
